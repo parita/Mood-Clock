@@ -45,8 +45,8 @@ pclassifier = nltk.NaiveBayesClassifier.train(extract_feature_set(file_data_p))
 bclassifier = nltk.NaiveBayesClassifier.train(extract_feature_set(file_data_b))
 
 #last_line = file(PATH_TO_FILE, "r").readlines()[-1]
-pcode = pclassifier.classify(extract_features("ladki patavi chokra? ;)"))
-bcode = bclassifier.classify(extract_features("jaa na!"))
+pcode = pclassifier.classify(extract_features("Hey, how you doing?"))
+bcode = bclassifier.classify(extract_features("I am on cloud nine"))
 print pcode
 print bcode
 ser = serial.Serial('/dev/ttyUSB0',9600,timeout=2)
